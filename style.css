@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.navbar {
+  color: rgb(233, 233, 97);
+  text-align: center !important;
+  justify-content: center !important;
+  padding: 10px;
+  background: rgb(28, 109, 202);
+}
+
+.box-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.roling {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.roling .spinBtn {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: xx-large;
+  letter-spacing: 0.1em;
+  border: 4px solid #c4bdbd;
+  cursor: pointer;
+  user-select: none;
+}
+
+.roling .spinBtn::before {
+  content: "";
+  z-index: 20;
+  position: absolute;
+  top: -20px;
+  width: 20px;
+  height: 26px;
+  background: #fff;
+  clip-path: polygon(51% 21%, 0 100%, 100% 100%);
+}
+
+.roling .wheel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 5px #533507, 0 0 0 19px #b2d0e2;
+  transition: transform 5s ease-in-out;
+}
+
+.roling .wheel .hadiah {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background: var(--clr);
+  transform-origin: bottom right;
+  transform: rotate(calc(45deg * var(--i)));
+  clip-path: polygon(0 0, 58% 0, 100% 100%, 0 58%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.roling .wheel .hadiah span {
+  position: relative;
+  transform: rotate(78deg);
+}
+
+.heroes {
+  font-size: 15px;
+}
+.blue {
+  color: rgb(53, 97, 155) !important;
+}
+
+.comment {
+  background: #eff2f7;
+  font-weight: 600;
+  font-size: small !important;
+}
+
+.space p {
+  justify-content: space-between;
+}
+
+.pop-up {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  position: fixed;
+  font-size: small;
+  z-index: 100;
+  top: -570px;
+  max-width: 480px;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px 25px 22px;
+  transition: top 0.3s ease;
+  box-shadow: 0 0px 40px rgba(0, 0, 0, 0.336);
+}
+
+.judul {
+  text-align: center;
+}
+
+.judul h4{
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1853f5;
+}
+
+.judul img{
+  width: 420px;
+}
+
+.wrapper.show {
+  top: 120px;
+}
+.wrapper header {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+header i {
+  color: #4070f4;
+  font-size: 32px;
+}
+header h2 {
+  color: #4070f4;
+  font-weight: 500;
+}
+.wrapper .data {
+  text-align: center;
+  margin: 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.wrapper .data p {
+  color: #333;
+}
+
+.wrapper .data h5{
+  font-size: 16px;
+  font-weight: 600;
+  color: #da0e0e;
+  text-align: center;
+}
+
+.wrapper .buttons {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttons .button {
+  border: none;
+  color: #fff;
+  padding: 8px 0;
+  border-radius: 4px;
+  background: #4070f4;
+  cursor: pointer;
+  width: calc(100%);
+  transition: all 0.2s ease;
+}
+.buttons #acceptBtn:hover {
+  background-color: #034bf1;
+}
+
+@media screen and (max-width: 760px){
+  .roling {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .judul img{
+    width: 350px;
+  }
+
+  .wrapper {
+    position: fixed;
+    font-size: small;
+    z-index: 100;
+    top: -570px;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px 25px 22px;
+    transition: top 0.3s ease;
+    box-shadow: 0 0px 40px rgba(0, 0, 0, 0.336);
+  }
+}
